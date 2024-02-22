@@ -4,11 +4,13 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom";
 
 import './index.css'
 import Root from './routes/root';
+import ErroPage from './error-page';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Root />
+    element:<Root />,
+    errorElement:<ErroPage />
   },
 ])
 
