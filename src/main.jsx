@@ -24,6 +24,8 @@ const router = createBrowserRouter([
     loader:rootLoader,
     action:rootAction,
     children:[
+      {errorElement:<ErroPage />,
+      children:[
       {
         index:true, element: <Index />,
       },
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
         path:"contacts/:contactId/destroy",
         action: destroyAction,
       }
-    ]
+    ]}]
   },
  
 ])
